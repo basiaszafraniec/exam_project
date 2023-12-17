@@ -14,6 +14,7 @@ function create_header() {
     // header_logo.appendChild(header_logo_img)
     // header.appendChild(header_logo);
 
+
     let header_div = document.createElement("div");
     header_div.style.display = "flex";
 
@@ -23,11 +24,12 @@ function create_header() {
     button.className = "header_btn";
     button.textContent = "HOME";
     home_div.appendChild(button);
+    // header_div.appendChild(home_div);
 
     let button_data = [
         { label: "ABOUT", link: "#what_are_fb" },
-        { label: "BARS", link: "#explore" },
-        { label: "F&Q", link: "#faq" },
+        { label: "MANU", link: "#menu" },
+        // { label: "F&Q", link: "#faq" },
         { label: "MAP", link: "#map" }
     ];
 
@@ -70,23 +72,3 @@ function create_footer() {
 
 create_header();
 create_footer();
-
-//function for the f&q accordeon
-function accordeon() {
-    let acc = document.getElementsByClassName("accordion");
-    let i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            let panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-}
-
-accordeon();
