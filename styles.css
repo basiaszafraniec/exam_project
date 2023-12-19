@@ -2,7 +2,6 @@
 font-family: 'Oswald', sans-serif;
 font-family: 'Silkscreen', sans-serif; */
 
-
 /* define colors and fonts for consistency */
 :root {
     --my_white: #FBFBFB;
@@ -15,65 +14,6 @@ font-family: 'Silkscreen', sans-serif; */
 
 * {
     margin: 0;
-	box-sizing: border-box;
-	padding: 0;
-}
-
-html, body {
-	width: 100%;
-	height: 100%;
-}
-
-.container {
-	width: 100%;
-	height: 100%;
-	background-color: #c9d6df;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.field {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 300px;
-}
-
-.mouse {
-	width: 50px;
-	height: 90px;
-	border: 3px solid #333;
-	border-radius: 60px;
-	position: absolute;
-	&::before {
-		content: '';
-		width: 12px;
-		height: 12px;
-		position: absolute;
-		top: 10px;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: #333;
-		border-radius: 50%;
-		opacity: 1;
-		animation: wheel 2s infinite;
-		-webkit-animation: wheel 2s infinite;
-	}
-}
-
-@keyframes wheel {
-	to {
-		opacity: 0;
-		top: 60px;
-	}
-}
-
-@-webkit-keyframes wheel {
-	to {
-		opacity: 0;
-		top: 60px;
-	}
 }
 
 /* style of section headers */
@@ -100,7 +40,7 @@ body {
 .header1 {
     z-index: 20;
     background-color: var(--my_white);
-    min-height: 3.5em;
+    height: 3.5em;
     width: 100vw;
     position: fixed;
     top: 0;
@@ -112,7 +52,7 @@ body {
 .header_btn {
     font-family: var(--anton);
     font-size: 1em;
-    min-height: 100%;
+    height: 100%;
     width: 10em;
     margin: 0;
     padding: 0;
@@ -132,7 +72,7 @@ body {
 
 .footer1 {
     background-color: var(--my_white);
-    min-height: 8em;
+    height: 8em;
     width: 100vw;
     margin-top: auto;
     display: flex;
@@ -150,7 +90,7 @@ body {
 
 /* section with the logo and a short text */
 .main1 {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .header_logo_img {
@@ -196,15 +136,14 @@ body {
     font-size: 1em;
 }
 
-#main_page {
-    background-image: url(images/pink_bar3.png);
-    background-attachment: fixed;
+#main_page{
+    background-image: url(images/pink_bar.png);
     background-size: cover;
 }
 
 /* section with a short discription of the concept of friday bars */
 .main2 {
-    min-height: 90vh;
+    height: 90vh;
     background-color: var(--div_background_grey);
     color: var(--my_black);
     display: flex;
@@ -220,7 +159,7 @@ body {
 
 /* section with a display of different bars */
 .main3 {
-    min-height: 90vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     color: var(--my_white);
@@ -292,51 +231,6 @@ body {
 }
 
 /* Katrinas Kaelder */
-#KK_main {
-    background-image: url("images/test_photo3.png");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.bar_main {
-    display: flex;
-    align-items: center;
-    color: var(--my_white);
-    font-family: var(--oswald);
-}
-
-.menu_items {
-    width: 80%;
-    margin: 20px auto;
-    font-family: var(--oswald);
-    font-weight: bold;
-    /* border-collapse: collapse; */
-
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-}
-
-.opening_hours {
-    color: var(--my_white);
-}
-
-th,
-td {
-    padding: 20px;
-    /* Increase the spacing */
-    text-align: left;
-    border-bottom: 1px solid var(--my_white);
-}
-
-/* Kurt Strandbar */
-
-#KS_main {
-    background-image: url("images/KS_kula.png");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#PR_main {
-    background-image: url("images/PR_bilard.png");
-    background-size: cover;
-    background-attachment: fixed;
+#KK_main{
+    background-image: url(images/KK_pan.png);
 }
