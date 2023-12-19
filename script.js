@@ -1,4 +1,9 @@
 //function for creating a header
+window.addEventListener.onload = (() => {
+    prompt("hello");
+    console.log("hi");
+})
+
 function create_header() {
     let header = document.createElement("header");
     header.className = "header1";

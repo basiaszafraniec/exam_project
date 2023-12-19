@@ -28,7 +28,7 @@ function create_header() {
 
     let button_data = [
         { label: "ABOUT", link: "#what_are_fb" },
-        { label: "MANU", link: "#menu" },
+        { label: "PRICES", link: "#menu" },
         // { label: "F&Q", link: "#faq" },
         { label: "MAP", link: "#map" }
     ];
