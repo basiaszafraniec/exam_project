@@ -15,7 +15,6 @@ font-family: 'Silkscreen', sans-serif; */
 * {
     margin: 0;
 }
-
 /* style of section headers */
 h2 {
     font-family: var(--anton);
