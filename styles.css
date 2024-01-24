@@ -226,6 +226,7 @@ section {
 }
 
 .more_bar_btn button {
+    background-color: var(--my_white);
     width: 6em;
     height: 3em;
     font-family: var(--anton);
