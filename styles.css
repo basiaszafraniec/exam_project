@@ -20,6 +20,7 @@ h2 {
     margin-top: 1em;
 }
 
+
 p {
     font-family: var(--oswald);
 }
@@ -174,20 +175,77 @@ section {
     width: 20em;
     height: 20em;
     margin: 2em;
-    /* background-image: url("images/test_photo.png"); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#KK_mini{
+.bar_in_accordeon h3 {
+    margin-left: 8%;
+    font-family: var(--anton);
+    font-size: 2em;
+    /* text-shadow: 
+        -2px -2px 1 var(--my_black),
+         2px -2px 1 var(--my_black),
+        -2px  2px 1 var(--my_black),
+         2px  2px 1 var(--my_black); */
+}
+
+.bar_in_accordeon h4 {
+    margin-left: 8%;
+    font-family: var(--anton);
+    font-size: 1em;
+}
+
+.open_or_nah {
+    background-color: var(--my_black);
+    border-radius: 0 0 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.bar_mini_icons{
+    margin-left: 8%;
+}
+
+.bar_mini_icon{
+    background-color: var(--my_black);
+    border-radius: 1em;
+    width: 2em;
+    height: 2em;
+    padding: .5em;
+
+}
+
+.more_bar_btn {
+    align-self: flex-end;    
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.more_bar_btn button {
+    width: 6em;
+    height: 3em;
+    font-family: var(--anton);
+    border: none;
+    border-radius: .5em;
+
+}
+
+#KK_mini {
     background-image: url("images/KK_green2.png");
     background-size: cover;
 }
-#PR_mini{
-    background-image: url("images/PR_bilard.png");
+
+#PR_mini {
+    background-image: url("images/PR_bilard2.png");
     background-size: cover;
 }
 
-#KS_mini{
-    background-image: url("images/KS_kula.png");
+#KS_mini {
+    background-image: url("images/KS_kula3.png");
     background-size: cover;
 }
 
@@ -272,6 +330,7 @@ section {
 
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
+
 
 .opening_hours {
     color: var(--my_white);
