@@ -1,23 +1,8 @@
-//function for creating a header
-window.addEventListener.onload = (() => {
-    prompt("hello");
-    console.log("hi");
-})
-
+//functions for creating a header and footer so they 
+let header;
 function create_header() {
-    let header = document.createElement("header");
+    header = document.createElement("header");
     header.className = "header1";
-
-    // let header_logo = document.createElement("a");
-    // header_logo.href = "index.html";
-
-    // let header_logo_img = document.createElement("img");
-    // header_logo_img.className = "header_logo_img";
-    // header_logo_img.src = "images/AU_logo.png";
-    // header_logo_img.alt = "Aarhus University Logo";
-
-    // header_logo.appendChild(header_logo_img)
-    // header.appendChild(header_logo);
 
     let header_div = document.createElement("div");
     header_div.style.display = "flex";
@@ -49,7 +34,8 @@ function create_header() {
     document.body.appendChild(header);
 }
 
-//function for creating a footer
+// setTimeout(() => { console.log(getComputedStyle(document.getElementById("header1")).height); }, 500);
+
 function create_footer() {
     let footer = document.createElement("footer");
     footer.className = "footer1";
@@ -75,6 +61,11 @@ function create_footer() {
 
 create_header();
 create_footer();
+
+document.querySelectorAll("section").forEach((e) => {
+    // console.log((window.innerHeight.toString()) - parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px");
+    e.style.minHeight = (window.innerHeight.toString()) - parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px";
+});
 
 //function for the f&q accordeon
 function accordeon() {
