@@ -1,4 +1,4 @@
-//functions for creating a header and footer so they 
+//functions for creating a header and footer
 let header;
 function create_header() {
     header = document.createElement("header");
@@ -34,8 +34,6 @@ function create_header() {
     document.body.appendChild(header);
 }
 
-// setTimeout(() => { console.log(getComputedStyle(document.getElementById("header1")).height); }, 500);
-
 function create_footer() {
     let footer = document.createElement("footer");
     footer.className = "footer1";
@@ -60,7 +58,6 @@ function create_footer() {
     for (let i = 0; i < button_data.length; i++) {
         let button = document.createElement("a");
         button.href = button_data[i].link;
-        // button.className = "header_btn";
         button.textContent = button_data[i].label;
         footer_div_links.appendChild(button);
     }

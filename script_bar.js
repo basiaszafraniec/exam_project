@@ -33,13 +33,10 @@ function create_header() {
     document.body.appendChild(header);
 }
 
-// setTimeout(() => { console.log(getComputedStyle(document.getElementById("header1")).height); }, 500);
-
 function create_footer() {
     let footer = document.createElement("footer");
     footer.className = "footer1";
 
-    // Create div for contact information
     let footer_div_contact = document.createElement("div");
 
     let footer_paragraphs = ["feel free to ask any questions :)", "tel: 60606060", "email: fridaybars@au.dk"];
@@ -49,7 +46,6 @@ function create_footer() {
         footer_div_contact.appendChild(paragraph);
     }
 
-    // Create div for links
     let footer_div_links = document.createElement("div");
 
     let button_data = [
@@ -63,7 +59,6 @@ function create_footer() {
     for (let i = 0; i < button_data.length; i++) {
         let button = document.createElement("a");
         button.href = button_data[i].link;
-        // button.className = "header_btn";
         button.textContent = button_data[i].label;
         footer_div_links.appendChild(button);
     }
