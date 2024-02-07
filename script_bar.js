@@ -1,19 +1,8 @@
-//function for creating a header
+//functions for creating a header and footer so they 
+let header;
 function create_header() {
-    let header = document.createElement("header");
+    header = document.createElement("header");
     header.className = "header1";
-
-    // let header_logo = document.createElement("a");
-    // header_logo.href = "index.html";
-
-    // let header_logo_img = document.createElement("img");
-    // header_logo_img.className = "header_logo_img";
-    // header_logo_img.src = "images/AU_logo.png";
-    // header_logo_img.alt = "Aarhus University Logo";
-
-    // header_logo.appendChild(header_logo_img)
-    // header.appendChild(header_logo);
-
 
     let header_div = document.createElement("div");
     header_div.style.display = "flex";
@@ -24,12 +13,10 @@ function create_header() {
     button.className = "header_btn";
     button.textContent = "HOME";
     home_div.appendChild(button);
-    // header_div.appendChild(home_div);
 
     let button_data = [
-        { label: "ABOUT", link: "#what_are_fb" },
-        { label: "PRICES", link: "#menu" },
-        // { label: "F&Q", link: "#faq" },
+        { label: "ABOUT", link: "#about" },
+        { label: "PRICES", link: "#prices" },
         { label: "MAP", link: "#map" }
     ];
 
@@ -46,29 +33,72 @@ function create_header() {
     document.body.appendChild(header);
 }
 
-//function for creating a footer
+// setTimeout(() => { console.log(getComputedStyle(document.getElementById("header1")).height); }, 500);
+
 function create_footer() {
     let footer = document.createElement("footer");
     footer.className = "footer1";
 
-    let footer_img = document.createElement("img");
-    footer_img.src = "images/AU_logo.png";
-    footer_img.alt = "Aarhus University Logo";
-    footer.appendChild(footer_img);
-
-    let footer_div = document.createElement("div");
+    // Create div for contact information
+    let footer_div_contact = document.createElement("div");
 
     let footer_paragraphs = ["feel free to ask any questions :)", "tel: 60606060", "email: fridaybars@au.dk"];
     for (let j = 0; j < footer_paragraphs.length; j++) {
         let paragraph = document.createElement("p");
         paragraph.textContent = footer_paragraphs[j];
-        footer_div.appendChild(paragraph);
+        footer_div_contact.appendChild(paragraph);
     }
 
-    footer.appendChild(footer_div);
+    // Create div for links
+    let footer_div_links = document.createElement("div");
+
+    let button_data = [
+        {label: "HOME", link: "index.html"},
+        { label: "ABOUT", link: "#about" },
+        { label: "BARS", link: "#bars" },
+        { label: "FAQ", link: "#faq" },
+        { label: "MAP", link: "#map" }
+    ];
+
+    for (let i = 0; i < button_data.length; i++) {
+        let button = document.createElement("a");
+        button.href = button_data[i].link;
+        // button.className = "header_btn";
+        button.textContent = button_data[i].label;
+        footer_div_links.appendChild(button);
+    }
+
+    footer.appendChild(footer_div_links);    
+    footer.appendChild(footer_div_contact);
+
 
     document.body.appendChild(footer);
 }
 
 create_header();
 create_footer();
+
+document.querySelectorAll("section").forEach((e) => {
+    e.style.minHeight = (window.innerHeight.toString()) - 
+    parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px";
+});
+
+//function for the faq accordeon
+function accordeon() {
+    let acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+}
+
+accordeon();

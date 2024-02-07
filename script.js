@@ -15,9 +15,9 @@ function create_header() {
     home_div.appendChild(button);
 
     let button_data = [
-        { label: "ABOUT", link: "#what_are_fb" },
-        { label: "BARS", link: "#explore" },
-        { label: "F&Q", link: "#faq" },
+        { label: "ABOUT", link: "#about" },
+        { label: "BARS", link: "#bars" },
+        { label: "FAQ", link: "#faq" },
         { label: "MAP", link: "#map" }
     ];
 
@@ -39,22 +39,33 @@ function create_header() {
 function create_footer() {
     let footer = document.createElement("footer");
     footer.className = "footer1";
-
-    let footer_img = document.createElement("img");
-    footer_img.src = "images/AU_logo.png";
-    footer_img.alt = "Aarhus University Logo";
-    footer.appendChild(footer_img);
-
-    let footer_div = document.createElement("div");
+    let footer_div_contact = document.createElement("div");
 
     let footer_paragraphs = ["feel free to ask any questions :)", "tel: 60606060", "email: fridaybars@au.dk"];
     for (let j = 0; j < footer_paragraphs.length; j++) {
         let paragraph = document.createElement("p");
         paragraph.textContent = footer_paragraphs[j];
-        footer_div.appendChild(paragraph);
+        footer_div_contact.appendChild(paragraph);
     }
+    let footer_div_links = document.createElement("div");
 
-    footer.appendChild(footer_div);
+    let button_data = [
+        {label: "HOME", link: "index.html"},
+        { label: "ABOUT", link: "#about" },
+        { label: "BARS", link: "#bars" },
+        { label: "FAQ", link: "#faq" },
+        { label: "MAP", link: "#map" }
+    ];
+
+    for (let i = 0; i < button_data.length; i++) {
+        let button = document.createElement("a");
+        button.href = button_data[i].link;
+        // button.className = "header_btn";
+        button.textContent = button_data[i].label;
+        footer_div_links.appendChild(button);
+    }
+    footer.appendChild(footer_div_links);    
+    footer.appendChild(footer_div_contact);
 
     document.body.appendChild(footer);
 }
@@ -63,11 +74,11 @@ create_header();
 create_footer();
 
 document.querySelectorAll("section").forEach((e) => {
-    // console.log((window.innerHeight.toString()) - parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px");
-    e.style.minHeight = (window.innerHeight.toString()) - parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px";
+    e.style.minHeight = (window.innerHeight.toString()) - 
+    parseInt((getComputedStyle(document.querySelector(".header1"))).height) + "px";
 });
 
-//function for the f&q accordeon
+//function for the faq accordeon
 function accordeon() {
     let acc = document.getElementsByClassName("accordion");
     let i;

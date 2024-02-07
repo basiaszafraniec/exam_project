@@ -79,9 +79,16 @@ body {
 }
 
 .footer1 div {
+    display: flex;
+    flex-direction: column;
     text-align: end;
     margin: 1em;
     margin-right: 2em;
+}
+.footer1 div a {
+    text-decoration: none;
+    color: var(--my_black);
+    font-family: var(--oswald);
 }
 
 section {
@@ -91,6 +98,19 @@ section {
 /* MAIN PAGE */
 
 /* section with the logo and a short text */
+
+.main1{
+    display: flex;
+
+}
+.main1 h4 {
+    font-family: var(--oswald);
+    font-size: 1.5em;
+    padding: 5em;
+    padding-left: 8em;
+    color: var(--my_white);
+    text-align: right;
+}
 .header_logo_img {
     width: 20%;
     padding: 1%;
@@ -102,6 +122,14 @@ section {
     color: var(--my_white);
     line-height: 1em;
     display: inline-block;
+}
+
+@media only screen and (max-width: 900px){
+    .big_text_logo {
+        font-size: 6em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
 }
 
 .big_text_logo p {
@@ -142,7 +170,6 @@ section {
 
 /* section with a short discription of the concept of friday bars */
 .main2 {
-    /* min-height: 90vh; */
     background-color: var(--div_background_grey);
     color: var(--my_black);
     display: flex;
@@ -169,6 +196,8 @@ section {
 
 .bars_accordeon {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .bar_in_accordeon {
@@ -194,6 +223,7 @@ section {
 .bar_in_accordeon h4 {
     margin-left: 8%;
     font-family: var(--anton);
+    font-weight: 500;
     font-size: 1em;
 }
 
@@ -265,12 +295,12 @@ section {
 
 .accordion {
     font-family: var(--oswald);
-    margin: 1em;
+    /* margin: 1em; */
     background-color: var(--my_white);
     cursor: pointer;
-    padding: 18px;
+    padding: 2em;
     width: 100%;
-    border: none;
+    border: var(--my_black) 1px;
     text-align: left;
     outline: none;
     font-size: 15px;
@@ -285,8 +315,10 @@ section {
 .panel {
     padding: 1em;
     display: none;
-    background-color: var(--my_white);
+    background-color: #eee;
     overflow: hidden;
+    width: 100%;
+    padding-left: 4em;
 }
 
 /* map section */
@@ -316,6 +348,17 @@ section {
     align-items: center;
     color: var(--my_white);
     font-family: var(--oswald);
+}
+
+.bar_right{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    color: var(--my_white);
+    margin-top: 5em;
+}
+.bar_right p {
+    padding: 3em;
 }
 
 /* .menu h2{
